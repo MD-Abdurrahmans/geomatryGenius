@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body>
+    
+<header></header>
+
+
+<main class="container mx-auto  flex flex-col  md:flex-row  justify-between">
+
+    <section>
+        <h1 class="text-center mt-2 text-orange-700 underline font-extrabold text-4xl">Geometry Genius</h1>
+        <div class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3   justify-around">
+
+<!-- 1 -->
+<div class=" max-w-sm m-2 bg-white border border-gray-200 rounded-lg shadow
+
+dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-center items-center text-center">
+    <a href="#">
+        <img class="rounded-t-lg" src="./images/triangle.png" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Triangle</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Area (A) =0.5 b x h</p>
+
+        <div class="flex justify-between">
+            <input id="baseField"  class="border border-gray-400 w-20" type="number" placeholder=" b"><span class="ml-3 mr-3 ">cm</span>
+            <input  id="heaightField" class="border border-gray-400 w-20" type="number" placeholder=" h"><span class="m-1">cm</span>
+        </div>
+  
+          <p >Area: <span id="areaTotal" >00</span> </p>
+        <button  onclick="triangle(this)" class="btn btn-primary text-white w-full mt-4">Calculate</button>
+        </a>
+    </div>
+</div>
+
+<!-- 2 -->
+<div class=" max-w-sm m-2 bg-white border border-gray-200 rounded-lg shadow
+
+dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-center items-center text-center">
+    <a href="#">
+        <img class="rounded-t-lg m-2" src="./images/rectangle.png" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rectangle</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Area (A) = w x l</p>
+
+        <div class="flex justify-between">
+            <input id="widthField"  class="border border-gray-400 w-20" type="number" placeholder=" w"><span class="ml-3 mr-3 ">cm</span>
+            <input  id="lengthField" class="border border-gray-400 w-20" type="number" placeholder="  l"><span class="m-1">cm</span>
+        </div>
+  
+          <p >Area: <span id="areaTotalRect" >00</span> </p>
+        <button  onclick="rectangle(this)" class="btn btn-primary text-white w-full mt-4">Calculate</button>
+        </a>
+    </div>
+</div>
+<!-- 3 -->
+<div class=" max-w-sm m-2 bg-white border border-gray-200 rounded-lg shadow
+
+dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-center items-center text-center">
+    <a href="#">
+        <img class="rounded-t-lg " src="./images/parallelogram.png" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Parallelogram</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Area (A) = b x h</p>
+
+        <div class="flex justify-between">
+            <input id="paraWidthField"  class="border border-gray-400 w-20" type="number" placeholder=" b"><span class="ml-3 mr-3 ">cm</span>
+            <input  id="ParaHeaightField" class="border border-gray-400 w-20" type="number" placeholder="  h"><span class="m-1">cm</span>
+        </div>
+  
+          <p >Area: <span id="ParallelogramText" >00</span> </p>
+        <button  onclick="Parallelogram(this)" class="btn btn-primary text-white w-full mt-4">Calculate</button>
+        </a>
+    </div>
+</div>
+<!-- 4 -->
+<div class=" max-w-sm m-2 bg-white border border-gray-200 rounded-lg shadow
+
+dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-center items-center text-center">
+    <a href="#">
+        <img class="rounded-t-lg " src="./images/parallelogram.png" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ellipse</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Area (A) =  πab</p>
+
+        <div class="flex justify-between">
+            <input id="largeField"  class="border border-gray-400 w-20" type="number" placeholder=" large"><span class="ml-3 mr-3 ">cm</span>
+            <input  id="shortField" class="border border-gray-400 w-20" type="number" placeholder="  short"><span class="m-1">cm</span>
+        </div>
+  
+          <p >Area: <span id="ellipseText" >00</span> </p>
+        <button  onclick="ellipse(this)" class="btn btn-primary text-white w-full mt-4">Calculate</button>
+        </a>
+    </div>
+</div>
+
+<!-- 5 -->
+<div class=" max-w-sm m-2 bg-white border border-gray-200 rounded-lg shadow
+
+dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-center items-center text-center">
+    <a href="#">
+        <img class="rounded-t-lg m-2" src="./images/rhombus.png" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rhombus</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Area (A) = 0.5 X d<sub>1</sub> X d <sub>2</sub> </p>
+
+        <div class="flex justify-between">
+            <input id="rhombusField-p"  class="border border-gray-400 w-20" type="number" placeholder=" 	Diagonal-p"><span class="ml-3 mr-3 ">cm</span>
+            <input  id="rhombusField-q" class="border border-gray-400 w-20" type="number" placeholder="  	Diagonal-q"><span class="m-1">cm</span>
+        </div>
+  
+          <p >Area: <span id="rhombusText" >00</span> </p>
+        <button  onclick="rhombus(this)" class="btn btn-primary text-white w-full mt-4">Calculate</button>
+        </a>
+    </div>
+</div>
+<!-- 6 -->
+<div class=" max-w-sm m-2 bg-white border border-gray-200 rounded-lg shadow
+
+dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-center items-center text-center">
+    <a href="#">
+        <img class="rounded-t-lg m-2" src="./images/pentagon.png" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pentagon</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Area (A) = 0.5 X p X b </p>
+
+        <div class="flex justify-between">
+            <input id="pentagon-p"  class="border border-gray-400 w-20" type="number" placeholder=" 	pentagon-p"><span class="ml-3 mr-3 ">cm</span>
+            <input  id="Pentagon-b" class="border border-gray-400 w-20" type="number" placeholder="  	pentagon-q"><span class="m-1">cm</span>
+        </div>
+  
+          <p >Area: <span id="pentagonText" >00</span> </p>
+        <button  onclick="pentagon(this)" class="btn btn-primary text-white w-full mt-4">Calculate</button>
+        </a>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <section class="text-center w-[400px]">
+        <h1 class="underline text-3xl text-sky-300">Area Calculation</h1>
+        <div id="calculation-container">
+
+        </div>
+    </section>
+</main>
+
+<script src="./js/function.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
